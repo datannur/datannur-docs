@@ -13,7 +13,7 @@
   },
   "scripts": {
     "node:ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",
-    "deploy": "npm run node:ts deploy/deploy.ts"
+    "deploy": "npm run node:ts deploy.ts"
   },
   "devDependencies": {
     "@types/node": "^25.6.0"

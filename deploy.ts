@@ -14,13 +14,13 @@ type DeployConfig = {
 }
 
 const thisDirname = dirname(fileURLToPath(import.meta.url))
-process.chdir(join(thisDirname, '..'))
+process.chdir(thisDirname)
 
 const configPath = join(thisDirname, 'deploy.config.json')
 
 if (!existsSync(configPath)) {
   console.error('❌ No deploy config found!')
-  console.log('📝 Create deploy/deploy.config.json')
+  console.log('📝 Create deploy.config.json')
   process.exit(1)
 }
 
