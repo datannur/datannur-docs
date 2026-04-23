@@ -1,0 +1,21 @@
+{
+  "name": "datannur-docs",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "datannur docs",
+  "author": {
+    "name": "datannur docs",
+    "url": "https://docs.datannur.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "node:ts": "node --experimental-strip-types --disable-warning=ExperimentalWarning",
+    "deploy": "npm run node:ts deploy/deploy.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  }
+}
