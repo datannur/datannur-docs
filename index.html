@@ -1,1 +1,193 @@
-test
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>datannur documentation</title>
+    <meta
+      name="description"
+      content="Documentation for datannur, split into two sections: the app (catalog interface) and the builder (metadata scanner)."
+    />
+    <link rel="icon" href="icon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-hover: #f5fbfb;
+        --border: #e3e8ec;
+        --text: #2b3740;
+        --muted: #6b7a85;
+        --accent: #17a39c;
+        --accent-soft: #e6f4f3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 2rem;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .banner {
+        display: block;
+        max-width: 320px;
+        width: 60%;
+        height: auto;
+        margin: 0 auto 2rem;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        margin: 0 0 0.75rem;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .lede {
+        color: var(--muted);
+        font-size: 1.1rem;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        padding: 1.75rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          background 0.15s ease,
+          border-color 0.15s ease,
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .card:hover,
+      .card:focus-visible {
+        background: var(--surface-hover);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(23, 163, 156, 0.12);
+        outline: none;
+      }
+      .card h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.35rem;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .card p {
+        margin: 0 0 1.25rem;
+        color: var(--muted);
+        flex: 1;
+      }
+      .card .cta {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .card .cta::after {
+        content: " →";
+        transition: transform 0.15s ease;
+        display: inline-block;
+      }
+      .card:hover .cta::after {
+        transform: translateX(3px);
+      }
+      footer {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          class="banner"
+          src="main-banner.png"
+          alt="datannur"
+          width="800"
+          height="160"
+        />
+        <h1>Documentation</h1>
+        <p class="lede">
+          The documentation is split into two sections, matching datannur's
+          modular architecture. Pick the one you need.
+        </p>
+      </header>
+
+      <section class="cards" aria-label="Documentation sections">
+        <a class="card" href="app/">
+          <h2>App</h2>
+          <p>
+            The catalog interface: browse datasets, variables and metadata in
+            your browser. Start here if you are exploring or deploying the
+            catalog.
+          </p>
+          <span class="cta">Open the app docs</span>
+        </a>
+
+        <a class="card" href="builder/">
+          <h2>Builder</h2>
+          <p>
+            The Python package that scans files and databases to build the
+            metadata feeding the catalog. Start here to automate ingestion.
+          </p>
+          <span class="cta">Open the builder docs</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>©2026 dat<span style="color: var(--accent)">a</span>nnur</footer>
+  </body>
+</html>
