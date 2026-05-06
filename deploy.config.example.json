@@ -1,0 +1,13 @@
+{
+  "name": "docs.example.com",
+  "host": "ssh.example.com",
+  "port": 22,
+  "username": "deploy_user",
+  "remotePath": "/path/to/public/site",
+  "privateKeyPath": "~/.ssh/id_ed25519",
+  "files": [
+    "index.html",
+    "icon.ico",
+    "main-banner.png"
+  ]
+}
